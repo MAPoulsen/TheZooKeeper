@@ -1,0 +1,24 @@
+
+.container{
+    text-align: center;
+}
+.navbar{
+    border: 2px, translucent, darkgrey;
+    background-color:416073;
+    /*d5a24c;*/
+    color: Black;
+    text-align: center;
+}
+.section{
+    text-align: center;
+}
+.h1{
+    font-family: "Times New Roman", Georgia, Serif, important!;
+}
+
+      .progress{
+          margin-top: 80px;
+          font-style: oblique;
+      }
+
+

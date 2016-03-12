@@ -1,0 +1,49 @@
+<html ng-app="zoo">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body ng-controller="ZooController as zoo">
+    <navbar></navbar>
+    <div class="container-fluid content-container">
+        <ui-view></ui-view>
+    </div>
+
+    <footer class="stacked-footer">
+
+
+    </footer>
+
+
+    <script src="assets/plugins/angular/angular.js"></script>
+    <script src="assets/plugins/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="assets/plugins/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!--<script src="assets/plugins/bootstrap/dist/js/bootstrap.js"></script>-->
+
+    <script src="assets/config/app.js"></script>
+    <script src="assets/config/routes.js"></script>
+
+    <script src="assets/config/TheZoo/ZooController.js"></script>
+    <script src="assets/config/region/region-controller.js"></script>
+    <!--<script src="assets/config/TheZoo/AnimalController.js"></script>
+    <script src="assets/config/Africa/AfricaController.js"></script>
+    <script src="assets/config/Arctic/ArcticController.js"></script>
+    <script src="assets/config/Asia/AsiaController.js"></script>
+    <script src="assets/config/Europe/EuropeController.js"></script>
+    <script src="assets/config/NorthAmerica/NAController.js"></script>
+    <script src="assets/config/SouthAmerica/SAController.js"></script>
+    <script src="assets/config/Australia/AusController.js"></script>-->
+
+    <script src="assets/config/TheZoo/animalService.js"></script>
+    <script src="assets/config/TheZoo/zooService.js"></script>
+
+
+
+</body>
+
+</html>
