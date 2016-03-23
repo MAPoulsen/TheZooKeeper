@@ -1,3 +1,4 @@
+
 app.config(function($stateProvider, $urlRouterProvider){
     
     $urlRouterProvider.otherwise('/');
@@ -5,13 +6,13 @@ app.config(function($stateProvider, $urlRouterProvider){
     $stateProvider
     .state('theZoo', {
         url:'/',
-        templateUrl: '/assets/config/TheZoo/theZoo.html',
+        templateUrl: '/theZoo.html',
         controller: 'ZooController',
         controllerAs: 'zc'
     })
     
     .state('region', {
-        url:'/:regionName',
+        url:'/region/:regionName',
         templateUrl: '/assets/config/region/region.html',
         controller: 'RegionController',
         controllerAs: 'rc'

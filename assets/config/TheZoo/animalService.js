@@ -1,6 +1,4 @@
 app.service('animalService', function(){
-  
-    
          var animals = [
             {name:'Lion',
             region: ['Africa', 'North America'],
@@ -9,10 +7,8 @@ app.service('animalService', function(){
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['meat'],
-            images:[{
-                full:"lion-01-full.jpg",
-                thumb:"lion-01-thumb.jpg",
-            }]},
+            image: "performingLion.png",               
+            },
             {
             name:'Elephant',
             region: ['Africa', 'Asia'],
@@ -21,10 +17,8 @@ app.service('animalService', function(){
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['vegetation'],
-            images:[{
-                full:"Elephant-01-full.jpg",
-                thumb:"Elephant-01-thumb.jpg",
-            }]},
+            image:"Elephants.png",
+            },
             {
             name:'Tiger',
             region: ['Asia'],
@@ -33,34 +27,28 @@ app.service('animalService', function(){
             packAnimal: false,
             gender:['male', 'female'],
             food: ['meat'],
-            images:[{
-                full:"Tiger-01-full.jpg",
-                thumb:"Tiger-01-thumb.jpg",
-            }]},
+            image:"Tiger.png",
+          },
             {
-            name:'Antelope',
+            name:'Ostrich',
             region: ['Africa', 'Asia', 'Europe'],
             predator: false,
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['vegetable'],
-            images:[{
-                full:"Antelope-01-full.jpg",
-                thumb:"Antelope-01-thumb.jpg",
-            }]},
+            image:"ostrichside.png",
+},
             {
             name:'Camel',
             region: ['Africa', 'Asia'],
            predator: false,
             size: 5,
-            packAnimal: false,
+            packAnimal: true,
             gender:['male', 'female'],
             food: ['vegetable'],
-            images:[{
-                full:"Anaconda-01-full.jpg",
-                thumb:"Anaconda-01-thumb.jpg",
-            }]},
+            image:"Camel.png",
+           },
               {
             name:'Wolf',
             region: ['North America', 'Europe', 'Arctic'],
@@ -69,34 +57,70 @@ app.service('animalService', function(){
             packAnimal: true,
             gender:['male', 'female'],
             food: ['meat'],
-            images:[{
-                full:"Wolf-01-full.jpg",
-                thumb:"Wolf-01-thumb.jpg",
-            }]},
+            image:"Wolf.png",
+           },
             {
             name:'Monkey',
             region: ['North America', 'Europe', 'Asia', 'South America'],
             predator: true,
-            size: 3,
+            size: 2,
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['meat', 'vegetable'],
-            images:[{
-                full:"Monkey-01-full.jpg",
-                thumb:"Monkey-01-thumb.jpg",
-            }]},
+            image:"Monkeyonstiltz.png",
+           },
+                 {
+            name:'Bear',
+            region: ['North America', 'Europe', 'Asia', 'South America'],
+            predator: true,
+            size: 4,
+            packAnimal: false,
+            gender: ['male', 'female'],
+            food: ['meat', 'vegetable'],
+            image:"bearsonbikes.png",
+           },
+                       {
+            name:'Polar Bear',
+            region: ['North America', 'Arctic'],
+            predator: true,
+            size: 4,
+            packAnimal: false,
+            gender: ['male', 'female'],
+            food: ['meat', 'vegetable'],
+            image:"PolarBearOnBall.png",
+           },
+                       {
+            name:'Rabbit',
+            region: ['North America', 'Europe', 'Asia', 'South America', "Petting Zoo", 'Australia'],
+            predator: false,
+            size: 1,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['vegetable'],
+            image:"rabbit.png",
+           },
+                       {
+            name:'Zebras',
+            region: ['North America', 'Africa', 'Asia', 'South America'],
+            predator: false,
+            size: 4,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['meat', 'vegetable'],
+            image: "Zebras.png",
+           },
         ]
-         })
          
-         this.getAnimals= function(){
+    this.getAnimals= function(){
              return animals;
-         }
-         this.getAnimals = function(name){
-             name=name.split('-').join(' ').toLowerCase;
-             for(var i =0; i<animals.length; i++){
-                 var currentAnimal = animals[i];
-                 if(currentAnimal.name.toLowerCase()=== name){
-                     return currentAnimal;
-                 }
-             }
-         }
+    }
+    this.getAnimal = function(name){
+        name = name.split('-').join(' ').toLowerCase;
+        for(var i =0; i<animals.length; i++){
+            var currentAnimal = animals[i];
+            if(currentAnimal.name.toLowerCase()=== name){
+                return currentAnimal;
+            }
+        }
+    }
+})

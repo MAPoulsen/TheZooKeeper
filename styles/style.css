@@ -1,24 +1,115 @@
-
-.container{
-    text-align: center;
+.header{
+    background: #416073 top center no-repeat;   
+    height: 75px;
+    margin-bottom:0;
 }
-.navbar{
-    border: 2px, translucent, darkgrey;
-    background-color:416073;
-    /*d5a24c;*/
-    color: Black;
-    text-align: center;
+.header img{
+   display: block;
+   margin: 0 auto 0 auto; 
 }
-.section{
-    text-align: center;
-}
-.h1{
-    font-family: "Times New Roman", Georgia, Serif, important!;
+.progress{
+    text-align: right;
 }
 
-      .progress{
-          margin-top: 80px;
-          font-style: oblique;
-      }
+.progress{
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+    
+#board {    
+    background: transparent url(/img/EmptyMap.png) no-repeat top center;
+    background-size: 100%;  
+    position: relative; 
+}
+ 
+.icons div{
+    position: absolute; 
+}
+.icons img{
+    height: 15%;
+}
 
+#Australia{
+   top:25%;
+   left:44%;
+}
+#Australia img{
+    height: 16%;
+}
 
+#Arctic{
+    top: 0%;
+    left: 19%;
+}
+#Arctic img{
+    height: 20%;
+}
+
+#Africa{
+    top: 33%;
+    left: 80%;
+}
+#Africa img{
+    height: 17%;
+}
+
+#PettingZoo2{
+    top: 61%;
+    left: 48%;
+}
+#PettingZoo2 img{
+    height: 20%;
+}
+
+#Asia{
+    top: 16%;
+    left: 15%;
+}
+#Asia img{
+    height: 25%;
+}
+
+#SouthAmerica{
+    top: 22%;
+    left: 61%;
+}
+#SouthAmerica img{
+    height: 22%;
+}
+#NorthAmerica{
+    top: 3%;
+    left: 48%;
+}
+#NorthAmerica img{
+    height: 25%;
+}
+
+#cageCart{
+    top: 73%;
+    left: 28%;
+}
+#cageCart img{
+    height: 23%;
+}
+#logo{
+   height: 100%;
+   padding-top:5;
+    position: center center; 
+}
+#logo img{
+    top:1%;
+    position:center;
+}
+.modal-body{
+  /*background-image: url(img/arctic.png);*/
+  background-size: contain;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+img a{
+    top: 10%;
+    left: -50%;
+}

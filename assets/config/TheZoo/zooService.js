@@ -6,49 +6,45 @@ app.service('zooService', function(){
            temperature: ["hot"],
             humidity: ["dry"],
             size: 1,
-            images:[{
-                full:"Africa-01-full.jpg",
-                thumb:"Africa-01-thumb.jpg"
-            }]},
+            image:"Africa.png",
+            },
+                            {name:'Arctic',
+           temperature: ['cold'],
+            humidity: ['wet'],
+            size: 1,
+            image:"Arctic.png",
+},
             
             {name:'Asia',
            temperature: ['hot', 'temperate'],
             humidity: ['temperate', 'wet'],
             size: 1,
-            images:[{
-                full:"/assets/img/Asia-01-full.jpg",
-                thumb:"Asia-01-thumb.jpg"
-            }]},
+            image:"/assets/img/Asia-01-full.png",
+            },
             
-             {name:'Europe',
+             {name:'Petting Zoo',
            temperature: ['temperate', 'cold'],
             humidity: ['temperate', 'wet'],
             size: 1,
-            images:[{
-                full:"Europe-01-full.jpg",
-                thumb:"Europe-01-thumb.jpg",
-            }]},
+            image:"PettingZoo.png",
+            },
                 {name:'North America',
            temperature: ['temperate', 'cold'],
             humidity: ['temperate', 'wet'],
             size: 1, 
-            images:[{
-                full:"NorthAmerica-01-full.jpg",
-                thumb:"NorthAmerica-01-thumb.jpg"
-            }]},
+            image:"NorthAmerica-01-full.png",
+            },
                 {name:'South America',
            temperature: ['hot'],
             humidity: ['temperate', 'wet'],
             size: 1,
-            images:[{
-                full:"SouthAmerica-01-full.jpg",
-                thumb:"SouthAmerica-01-thumb.jpg"
-            }]}
+            image:"SouthAmerica-01-full.png",
+}
          ]
-         
-         this.getEnvironments= function(){
+         this.getEnvironments = function(){
              return environments;
          }
+         
          this.getEnvironment = function(name){
              name = name.split('-').join(' ').toLowerCase();
              for (var i = 0; i < environments.length; i++){
@@ -58,4 +54,4 @@ app.service('zooService', function(){
                  }
              }
          }
-});
+})
