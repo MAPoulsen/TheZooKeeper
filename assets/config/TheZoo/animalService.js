@@ -1,6 +1,7 @@
 app.service('animalService', function(){
          var animals = [
             {name:'Lion',
+            drag: true,
             region: ['Africa', 'North America'],
             predator: true,
             size: 4,
@@ -9,6 +10,8 @@ app.service('animalService', function(){
             food: ['meat'],
             image: "img/performingLion.png",               
             },
+            
+     
             {
             name:'Elephant',
             region: ['Africa', 'Asia'],
@@ -47,7 +50,7 @@ app.service('animalService', function(){
             packAnimal: true,
             gender:['male', 'female'],
             food: ['vegetable'],
-            image:"Camel.png",
+            image:"img/Camel.png",
            },
               {
             name:'Wolf',
@@ -67,7 +70,7 @@ app.service('animalService', function(){
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['meat', 'vegetable'],
-            image:"Monkeyonstiltz.png",
+            image:"img/Monkeyonstiltz.png",
            },
                  {
             name:'Bear',
@@ -106,9 +109,38 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['meat', 'vegetable'],
+            food: ['vegetable'],
             image: "img/Zebras.png",
            },
+                            {
+            name:'Kangaroo',
+            region: ["Australia"],
+            predator: false,
+            size: 3,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['vegetable'],
+            image: "img/kangaroo.png",
+           },
+                 { name:'Coyote',
+            region: ["North America", "South America", "Africa"],
+            predator: true,
+            size: 3,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['meat'],
+            image: "img/coyote.png",
+           },
+                    { name:'Giraffe',
+            region: ["Africa"],
+            predator: false,
+            size: 5,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['vegetarian'],
+            image: "img/giraffe.png",
+           },
+                         
         ]
          
     this.getAnimals= function(){

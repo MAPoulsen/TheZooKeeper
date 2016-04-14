@@ -1,30 +1,33 @@
 app.controller('ZooController', function($scope, zooService, animalService) {
-    
-     window.formatImage = function() {
+
+    window.formatImage = function() {
         var ratio = window.innerWidth / 2693;
         var div = document.getElementById("board");
-        if(div){
-         div.style.height = 1974 * ratio;
+        if (div) {
+            div.style.height = 1974 * ratio;
         }
     }
     window.onresize = window.formatImage;
     window.formatImage();
-    
+
     $scope.environments = zooService.getEnvironments();
-    console.log($scope.environments);
-    
-  
-   /* $scope.showModal = function() {
-        $scope.myModal = true;
-    }
+    console.log($scope.environment);
 
-    $scope.hideModal = function() {
-        $scope.myModal = false;
-    }*/
 
-   
+    /* $scope.showModal = function() {
+         $scope.myModal = true;
+     }
+ 
+     $scope.hideModal = function() {
+         $scope.myModal = false;
+     }*/
 
-    $scope.selectCurrentAnimal = function(){
+    // shuffle and call new animal
+    $scope.selectCurrentAnimal = function(x) {
+        if (x) {
+            $scope.currentAnimal = ''
+            return
+        }
         $scope.animals = shuffleArray(animalService.getAnimals());
         $scope.currentAnimal = $scope.animals[0];
     }
@@ -38,8 +41,30 @@ app.controller('ZooController', function($scope, zooService, animalService) {
         }
         return array;
     }
-})
 
+
+    $scope.startDragging = function(event, ui, animal) {
+        console.log("You've just started dragging " + animal.animal);
+        $scope.draggedAnimal = animal.animal;
+    }
+
+
+    $scope.dropComplete = function(animal, index) {
+        var environment = $scope.environments[index];
+        environment.animals = environment.animals || [];
+        for (var i = 0; i < environment.animals.length; i++) {
+            if (environment.animals[i].name === animal.name) {
+                //dont push if already in environment
+                console.log("You already left this animal here once!");
+                return
+            }
+        }
+        environment.animals.push(animal);
+        console.log($scope.environments[index])
+        $scope.selectCurrentAnimal(true);
+    }
+
+});
 
 
 

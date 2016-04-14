@@ -1,120 +1,87 @@
-<div class="header">
-
-    <img src="img/Ribbon.png" alt="The Zoo Keeper Logo" id="logo">
-
-</div>
-
-<div class="main-content">
-    <div class="progress">
-        <label for="progress">Player's Progress</label>
-        <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-
-            <a class="sr-only">60% Complete (warning)</a>
-        </div>
+<div class="main-container">
+    <div class="header">
+        <img src="img/Ribbon.png" alt="The Zoo Keeper Logo" id="logo">
     </div>
 
-    <div class="main">
-        <div id="board">
-            <div class="icons">
-<!--
-                <div ng-repeat="environment in environments">
-                    <img ng-src="{{environment.image}}" alt="Description" />
-                    
-                </div>
--->
+    <body data-ng-controller="ZooController">
+        <div class="progress">
+            <label for="progress">Player's Progress</label>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+            aria-valuemax="100" style="width: 60%">
+                <a class="sr-only">60% Complete (warning)</a>
+            </div>
+        </div>
 
-                <div id="Arctic">
-                    <a ui-sref="region({regionName: 'Arctic'})">
-                        <img src="img/Arctic.png" alt="Arctic Icon"></a>
-                </div>
-                <div id="NorthAmerica">
-                    <a ui-sref="region({regionName: 'North America'})"><img src="img/NorthAmerica.png" alt="NorthAmerica Icon"></a>
-                </div>
+        <div class="main">
+            <div id="board">
 
-                <div id="Australia">
-                   <a ui-sref="region({regionName: 'Australia'})"><img src="img/Australia.png" alt="Australia Icon"></a>
-                </div>
-                <div id="SouthAmerica">
-                     <a ui-sref="region({regionName: 'South America'})"><img src="img/SouthAmerica.png" alt="SouthAmerica Icon"></a>
-                </div>
-                <div id="Asia">
-                     <a ui-sref="region({regionName: 'Asia'})"><img src="img/Asia.png" alt="Asia Icon"></a>
-                </div>
-                <div id="Africa">
-                     <a ui-sref="region({regionName: 'Africa'})"><img src="img/Africa.png" alt="Africa Icon"></a>
-                </div>
 
-                <div id="PettingZoo2">
-                    <a><img src="img/PettingZoo2.png" alt="PettingZoo Icon"></a>
-                </div>
-
-                <div id="cageCart">
-                    <a  ui-sref="animal({animalName: currentAnimal.name})">
-                        <img src="img/cageCart.png" alt="Animal Cart">
-                        <img ng-src="{{currentAnimal.image}}" alt="{{currentAnimal.name}}">
-                        <figcaption class="ng-binding" style="position: absolute; top: 67%; left: 100%; font-size: 26px;">{{currentAnimal.name}}</figcaption>
-                       
+                <!--<div id="icons">-->
+                <div ng-repeat="environment in environments" class="environment" id="{{environment.name.split(' ').join('')}}" ng-drop="true"
+                ng-drop-success="dropComplete($data, $index)">
+                    <a ui-sref="region({regionName: environment.name})">
+                        <img ng-src="{{environment.image}}" alt="{{environment.name}}">
                     </a>
                 </div>
 
-            </div>
 
-            <div>
-                <button class = "btn btn-primary" ng-click="selectCurrentAnimal()">Accept animal</button>
-            </div>
+                <div class="cageCart">
+                    <img src="img/cageCart.png" alt="Animal Cart">
+                    <div class="animal" ng-show="currentAnimal">
+                        <a ui-sref="animal({animalName: currentAnimal.name})"></a>
+                        <img src="{{currentAnimal.image}}" alt="{{currentAnimal.name}}" ng-drag="true" ng-drag-data="currentAnimal">
+                        <!--<figcaption class="ng-binding" style="position: absolute; top: 67%; left: 100%; font-size: 26px;">{{currentAnimal.name}}</figcaption>-->
+                    </div>
 
+                </div>
+                <div class="animalButton">
+                    
+                    <label id="button">New Animal</label>
+                    <img src="img/button.png" alt="Button Icon" ng-click="selectCurrentAnimal()">
+                
+                </div>
+            </div>
         </div>
+      
+    </body>
 
-    </div>
 
-    <!-- Button trigger modal -->
+</div>
 
-    <!--<button type="button" class="btn btn-primary btn-lg" ng-click="showModal()" >
+
+
+
+
+
+<!-- Button trigger modal -->
+
+<!--<button type="button" class="btn btn-primary btn-lg" ng-click="showModal()" >
   Launch demo modal
 </button>-->
 
-    <!-- Modal -->
-    <div class="modal fade" ng-class="myModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div id="modal-picture">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <div class="modal-body">
-                    <a>
+<!-- Modal -->
+<div class="modal fade" ng-class="myModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="modal-picture">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <a>
                         <img src="img/arctic.png" class="image-responsive"" alt="Environment">
                         <img ng-src="img/{{currentEnvironment.image}}" alt="{{currentEnvironment.name}}">
                         <figcaption class="ng-binding" style="position: absolute; top: 67%; left: 100%; font-size: 26px;">{{currentEnvironment.name}}</figcaption>
                     </a>
-                    <!--<img ng-src="{{currentEnvironment.image}}" alt="{{currentEnvironment.name}} {{currentEnvironment.Temperature}} {{currentEnvironment.Humidity}}"></div>
+                <!--<img ng-src="{{currentEnvironment.image}}" alt="{{currentEnvironment.name}} {{currentEnvironment.Temperature}} {{currentEnvironment.Humidity}}"></div>
                 <div class="modal-footer">-->
-                    <h1>Welcome to the Arctic</h1>
-                    <p> {{currentEnvironment.name}} {{currentEnvironment.Temperature}}</p>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                <h1>Welcome to the Arctic</h1>
+                <p> {{currentEnvironment.name}} {{currentEnvironment.Temperature}}</p>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
+</div>
 
 
 
-
-    <!--    
-        <div class="modal fade" ng-class="myModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>-->
