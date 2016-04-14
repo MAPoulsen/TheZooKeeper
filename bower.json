@@ -17,8 +17,12 @@
     "bootstrap": "^3.3.6",
     "angular-ui-router": "ui-router#^0.2.18",
     "angular-bootstrap": "^1.2.4",
+<<<<<<< HEAD
     "ngDraggable": "^0.1.8",
     "angular-dragdrop": "^1.0.13",
     "jquery-ui": "^1.11.4"
+=======
+    "ngDraggable": "^0.1.8"
+>>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
   }
 }

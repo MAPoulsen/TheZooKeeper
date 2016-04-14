@@ -5,18 +5,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/plugins/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-
     <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
+
 <body ng-controller="ZooController as zoo" class="ng-scope">
+
     <navbar></navbar>
     <div class="container-fluid">
         <ui-view></ui-view>
     </div>
 
     <footer class="stacked-footer">
+
     </footer>
 
 
@@ -27,7 +29,6 @@
     <script src="assets/plugins/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="assets/plugins/bootstrap/dist/js/bootstrap.js"></script>
     <script src="assets/plugins/ngDraggable/ngDraggable.js"></script>
-
     <script src="assets/config/app.js"></script>
     <script src="assets/config/routes.js"></script>
 
@@ -38,6 +39,20 @@
     <script src="assets/config/TheZoo/zooService.js"></script>
 
 
+    <script>
+        window.formatImage = function() {
+   
+        var ratio = window.innerWidth / 2693;
+        
+        var div = document.getElementById("board");
+        
+        if(div){
+         div.style.height = 1974 * ratio;
+        }
+    }
+
+    window.onresize = window.formatImage;
+    </script>
 
 </body>
 

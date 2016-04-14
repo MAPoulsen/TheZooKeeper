@@ -17,8 +17,6 @@ app.config(function($stateProvider, $urlRouterProvider){
         controller: 'RegionController',
         controllerAs: 'rc'
     })
-    
-    
     .state('animal', {
         url:'/animal/:animalName',
         templateUrl: '/assets/config/Animal/animal.html',

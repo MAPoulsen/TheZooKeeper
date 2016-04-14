@@ -10,8 +10,6 @@ app.service('animalService', function(){
             food: ['meat'],
             image: "img/performingLion.png",               
             },
-            
-     
             {
             name:'Elephant',
             region: ['Africa', 'Asia'],
@@ -21,6 +19,7 @@ app.service('animalService', function(){
             gender: ['male', 'female'],
             food: ['vegetation'],
             image:"img/Elephants.png",
+
             },
             {
             name:'Tiger',
@@ -139,16 +138,13 @@ app.service('animalService', function(){
             gender: ['male', 'female'],
             food: ['vegetarian'],
             image: "img/giraffe.png",
-           },
-                         
+           }
         ]
          
     this.getAnimals= function(){
              return animals;
     }
     this.getAnimal = function(name){
-       //console.log(name);
-        
         for(var i =0; i<animals.length; i++){
             var currentAnimal = animals[i];
             if(currentAnimal.name === name){
