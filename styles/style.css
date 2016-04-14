@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /*.game-rules{
     background-color: white opacity 50%;
     background-image: url(/img/button.png);
@@ -20,17 +20,7 @@
    padding-top:10px;
   
 }
-=======
-.header{
-    background: #416073 top center no-repeat;   
-    height: 75px;
-    margin-bottom:0;
-}
-.header img{
-   display: block;
-   margin: 0 auto 0 auto; 
-}
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
+
 .progress{
     text-align: right;
 }
@@ -45,7 +35,6 @@
     background-size: 100%;  
     position: relative; 
 }
-<<<<<<< HEAD
 
 .environment{
     position: absolute;
@@ -60,8 +49,7 @@
 #Arctic{
     top: 0%;
     left: 17%;
-=======
- 
+} 
 .icons div{
     position: absolute; 
 }
@@ -80,43 +68,38 @@
 #Arctic{
     top: 0%;
     left: 19%;
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
 }
 #Arctic img{
     height: 20%;
 }
 
 #Africa{
-<<<<<<< HEAD
     top: 21%;
-=======
-    top: 33%;
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
     left: 80%;
 }
 #Africa img{
     height: 17%;
 }
 
-<<<<<<< HEAD
+
 #PettingZoo{
     top: 49%;
     left: 50%;
 }
 #PettingZoo img{
-=======
+}
 #PettingZoo2{
     top: 61%;
     left: 48%;
 }
 #PettingZoo2 img{
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
+
     height: 20%;
 }
 
 #Asia{
     top: 16%;
-<<<<<<< HEAD
+
     left: 12%;
 }
 #Asia img{
@@ -176,48 +159,6 @@
 
 
 .modal-body{
-
-=======
-    left: 15%;
-}
-#Asia img{
-    height: 25%;
-}
-
-#SouthAmerica{
-    top: 22%;
-    left: 61%;
-}
-#SouthAmerica img{
-    height: 22%;
-}
-#NorthAmerica{
-    top: 3%;
-    left: 48%;
-}
-#NorthAmerica img{
-    height: 25%;
-}
-
-#cageCart{
-    top: 73%;
-    left: 28%;
-}
-#cageCart img{
-    height: 23%;
-}
-#logo{
-   height: 100%;
-   padding-top:5;
-    position: center center; 
-}
-#logo img{
-    top:1%;
-    position:center;
-}
-.modal-body{
-  /*background-image: url(img/arctic.png);*/
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
   background-size: contain;
   position: absolute;
   background-position: center;
@@ -225,15 +166,13 @@
   height: 100%;
   width: 100%;
 }
-<<<<<<< HEAD
 
 .regionImage {
     display: block;
     margin-left: auto;
     margin-right: auto;
-=======
+}
 img a{
     top: 10%;
     left: -50%;
->>>>>>> 9f4465ca3fab3413b7c6d306ffad2ffa6ce184f2
 }
