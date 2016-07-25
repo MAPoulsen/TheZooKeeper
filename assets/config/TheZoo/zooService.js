@@ -8,7 +8,7 @@ app.service('zooService', function(){
             size: 1,
             image:"Africa.png",
             },
-                            {name:'Arctic',
+            {name:'Arctic',
            temperature: ['cold'],
             humidity: ['wet'],
             size: 1,

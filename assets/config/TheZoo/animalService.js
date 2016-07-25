@@ -16,7 +16,7 @@ app.service('animalService', function(){
             size: 5,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['vegetation'],
+            food: ['vegetatian'],
             image:"Elephants.png",
             },
             {
@@ -36,7 +36,7 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['vegetable'],
+            food: ['vegetarian'],
             image:"ostrichside.png",
 },
             {
@@ -46,7 +46,7 @@ app.service('animalService', function(){
             size: 5,
             packAnimal: true,
             gender:['male', 'female'],
-            food: ['vegetable'],
+            food: ['vegetarian'],
             image:"Camel.png",
            },
               {
@@ -66,7 +66,7 @@ app.service('animalService', function(){
             size: 2,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['meat', 'vegetable'],
+            food: ['meat', 'vegetarian'],
             image:"Monkeyonstiltz.png",
            },
                  {
@@ -76,7 +76,7 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: false,
             gender: ['male', 'female'],
-            food: ['meat', 'vegetable'],
+            food: ['meat', 'vegetarian'],
             image:"bearsonbikes.png",
            },
                        {
@@ -86,7 +86,7 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: false,
             gender: ['male', 'female'],
-            food: ['meat', 'vegetable'],
+            food: ['meat', 'vegetarian'],
             image:"PolarBearOnBall.png",
            },
                        {
@@ -96,7 +96,7 @@ app.service('animalService', function(){
             size: 1,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['vegetable'],
+            food: ['vegetarian'],
             image:"rabbit.png",
            },
                        {
@@ -106,7 +106,7 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
-            food: ['meat', 'vegetable'],
+            food: ['meat', 'vegetarian'],
             image: "Zebras.png",
            },
         ]
