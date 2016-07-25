@@ -1,6 +1,12 @@
+
+/*.game-rules{
+    background-color: white opacity 50%;
+    background-image: url(/img/button.png);
+    
+}*/
 .header{
     background: #416073 top center no-repeat;   
-    height: 75px;
+    height: 10%;
     margin-bottom:0;
 }
 .main-content{
@@ -16,9 +22,17 @@
     font-family: 'Special Elite', cursive;
 }
 .header img{
+   position: relative;
+   height: 100%;
    display: block;
    margin: 0 auto 0 auto; 
 }
+#logo{
+   height: 90%;
+   padding-top:10px;
+  
+}
+
 .progress{
     text-align: right;
 }
@@ -32,8 +46,27 @@
     background: transparent url(/img/EmptyMap.png) no-repeat top center;
     background-size: 100%;  
     position: relative; 
+<<<<<<< HEAD
 }*/
  
+=======
+}
+
+.environment{
+    position: absolute;
+}
+#Australia{
+     top: 20%;
+    left: 42%;
+}
+#Australia img{
+    height: 17%;
+}
+#Arctic{
+    top: 0%;
+    left: 17%;
+} 
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
 .icons div{
     position: absolute; 
 }
@@ -58,68 +91,103 @@
 }
 
 #Africa{
-    top: 33%;
+    top: 21%;
     left: 80%;
 }
 #Africa img{
     height: 17%;
 }
 
+
+#PettingZoo{
+    top: 49%;
+    left: 50%;
+}
+#PettingZoo img{
+}
 #PettingZoo2{
     top: 61%;
     left: 48%;
 }
 #PettingZoo2 img{
+
     height: 20%;
 }
 
 #Asia{
     top: 16%;
-    left: 15%;
+
+    left: 12%;
 }
 #Asia img{
-    height: 25%;
+    height: 20%;
 }
 
 #SouthAmerica{
-    top: 22%;
+    top: 15%;
     left: 61%;
 }
 #SouthAmerica img{
-    height: 22%;
+    height: 20%;
 }
 #NorthAmerica{
-    top: 3%;
-    left: 48%;
+    top:1%;
+    left: 50%;
 }
 #NorthAmerica img{
-    height: 25%;
+    height: 20%;
 }
 
-#cageCart{
-    top: 73%;
-    left: 28%;
+.cageCart{
+    position: absolute;
+    top: 60%;
+    left: 26%;
+    width: 100%;
+    /*background: url(/img/cageCart.png) no-repeat top center;
+    min-height: 200px;
+    min-width: 200px;
+    background-size: contain;*/
 }
-#cageCart img{
+.cageCart img{
     height: 23%;
 }
-#logo{
-   height: 100%;
-   padding-top:5;
-    position: center center; 
+
+.animalButton{
+    position: absolute;
+     top:68%;
+    left:1%;  
 }
-#logo img{
-    top:1%;
-    position:center;
+.animalButton img{
+    height: 7%;
 }
+
+#button {
+ font-size: 24px;
+ top: 2%;
+ left: 2%;
+   }
+   
+.animal{
+    display: inline-block;
+        /*position: absolute;
+        top: 1%;
+        left: 107% */
+   }
+
+
 .modal-body{
-  /*background-image: url(img/arctic.png);*/
   background-size: contain;
   position: absolute;
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+}
+
+.regionImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 img a{
     top: 10%;

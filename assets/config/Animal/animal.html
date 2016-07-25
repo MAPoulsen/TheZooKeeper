@@ -1,0 +1,30 @@
+<div class="container">
+
+    {{animal}}
+
+    <div class="well">
+        <div class="panel-body">
+            <h2>All about {{animal.name}}</h2>
+
+        </div>
+   Region
+        <ul class="list-group" ng-repeat="region in animal.region">
+
+            <li class="list-group-item">{{region}}</li>
+        </ul>
+        Food
+        <ul class="list-group" ng-repeat="food in animal.food">
+
+            <li class="list-group-item">{{food}}</li>
+        </ul>
+
+        <div class="container-fluid">
+            <img class="regionImage" ng-src="{{animal.image}}" alt="{{animal.name}}">
+        </div>
+    </div>
+
+
+
+</div>
+<a ui-sref="theZoo">
+    <button class="btn btn-primary">Home</button>

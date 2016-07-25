@@ -1,13 +1,14 @@
 app.service('animalService', function(){
          var animals = [
             {name:'Lion',
+            drag: true,
             region: ['Africa', 'North America'],
             predator: true,
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
             food: ['meat'],
-            image: "performingLion.png",               
+            image: "img/performingLion.png",               
             },
             {
             name:'Elephant',
@@ -16,8 +17,14 @@ app.service('animalService', function(){
             size: 5,
             packAnimal: true,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['vegetatian'],
             image:"Elephants.png",
+=======
+            food: ['vegetation'],
+            image:"img/Elephants.png",
+
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
             },
             {
             name:'Tiger',
@@ -27,7 +34,7 @@ app.service('animalService', function(){
             packAnimal: false,
             gender:['male', 'female'],
             food: ['meat'],
-            image:"Tiger.png",
+            image:"img/Tiger.png",
           },
             {
             name:'Ostrich',
@@ -36,8 +43,13 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['vegetarian'],
             image:"ostrichside.png",
+=======
+            food: ['vegetable'],
+            image:"img/ostrichside.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
 },
             {
             name:'Camel',
@@ -46,8 +58,13 @@ app.service('animalService', function(){
             size: 5,
             packAnimal: true,
             gender:['male', 'female'],
+<<<<<<< HEAD
             food: ['vegetarian'],
             image:"Camel.png",
+=======
+            food: ['vegetable'],
+            image:"img/Camel.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
            },
               {
             name:'Wolf',
@@ -57,7 +74,7 @@ app.service('animalService', function(){
             packAnimal: true,
             gender:['male', 'female'],
             food: ['meat'],
-            image:"Wolf.png",
+            image:"img/Wolf.png",
            },
             {
             name:'Monkey',
@@ -66,8 +83,13 @@ app.service('animalService', function(){
             size: 2,
             packAnimal: true,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['meat', 'vegetarian'],
             image:"Monkeyonstiltz.png",
+=======
+            food: ['meat', 'vegetable'],
+            image:"img/Monkeyonstiltz.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
            },
                  {
             name:'Bear',
@@ -76,8 +98,13 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: false,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['meat', 'vegetarian'],
             image:"bearsonbikes.png",
+=======
+            food: ['meat', 'vegetable'],
+            image:"img/bearsonbikes.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
            },
                        {
             name:'Polar Bear',
@@ -86,8 +113,13 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: false,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['meat', 'vegetarian'],
             image:"PolarBearOnBall.png",
+=======
+            food: ['meat', 'vegetable'],
+            image:"img/PolarBearOnBall.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
            },
                        {
             name:'Rabbit',
@@ -96,8 +128,13 @@ app.service('animalService', function(){
             size: 1,
             packAnimal: true,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['vegetarian'],
             image:"rabbit.png",
+=======
+            food: ['vegetable'],
+            image:"img/rabbit.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
            },
                        {
             name:'Zebras',
@@ -106,21 +143,55 @@ app.service('animalService', function(){
             size: 4,
             packAnimal: true,
             gender: ['male', 'female'],
+<<<<<<< HEAD
             food: ['meat', 'vegetarian'],
             image: "Zebras.png",
+=======
+            food: ['vegetable'],
+            image: "img/Zebras.png",
            },
+                            {
+            name:'Kangaroo',
+            region: ["Australia"],
+            predator: false,
+            size: 3,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['vegetable'],
+            image: "img/kangaroo.png",
+           },
+                 { name:'Coyote',
+            region: ["North America", "South America", "Africa"],
+            predator: true,
+            size: 3,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['meat'],
+            image: "img/coyote.png",
+>>>>>>> c6e24257238bf89d4e779cebb6ce39ddd48ef744
+           },
+                    { name:'Giraffe',
+            region: ["Africa"],
+            predator: false,
+            size: 5,
+            packAnimal: true,
+            gender: ['male', 'female'],
+            food: ['vegetarian'],
+            image: "img/giraffe.png",
+           }
         ]
          
     this.getAnimals= function(){
              return animals;
     }
     this.getAnimal = function(name){
-        name = name.split('-').join(' ').toLowerCase;
         for(var i =0; i<animals.length; i++){
             var currentAnimal = animals[i];
-            if(currentAnimal.name.toLowerCase()=== name){
+            if(currentAnimal.name === name){
+                console.log(currentAnimal);
                 return currentAnimal;
             }
+            console.log("no match");
         }
     }
 })
